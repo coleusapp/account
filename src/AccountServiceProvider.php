@@ -2,9 +2,9 @@
 
 namespace Coleus\Account;
 
+use Coleus\Account\Commands\AccountCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Coleus\Account\Commands\AccountCommand;
 
 class AccountServiceProvider extends PackageServiceProvider
 {
