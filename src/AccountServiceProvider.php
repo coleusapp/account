@@ -4,17 +4,14 @@ namespace Coleus\Account;
 
 use Coleus\Account\Commands\AccountCommand;
 use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
+// use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class AccountServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
-        /*
-         * This class is a Package Service Provider
-         *
-         * More info: https://github.com/spatie/laravel-package-tools
-         */
+        // $this->app->register(Spatie\Permission\PermissionServiceProvider::class);
+
         $package
             ->name('account')
             ->hasConfigFile()
