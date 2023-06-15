@@ -1,6 +1,5 @@
 <?php
 
-// config for Coleus/Account
 return [
-
+    'route_prefix' => 'account',
 ];
