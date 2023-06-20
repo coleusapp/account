@@ -1,13 +1,13 @@
 <?php
 
-namespace Coleus\Account\Middleware;
+namespace Coleus\Account\Http\Middleware;
 
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 
 class HandleInertiaRequests extends Middleware
 {
-    protected $rootView = 'app';
+    protected $rootView = 'Account::app';
 
     public function version(Request $request): ?string
     {

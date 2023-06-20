@@ -4,4 +4,5 @@ namespace Coleus\Account;
 
 class Account
 {
+    //
 }

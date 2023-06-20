@@ -97,7 +97,7 @@
                   href="#"
               >
                 <span class="sr-only">Sign in with Facebook</span>
-                <Facebook class="w-5 h-5"/>
+                <!--<Facebook class="w-5 h-5"/>-->
               </a>
             </div>
 
@@ -107,7 +107,7 @@
                   href="#"
               >
                 <span class="sr-only">Sign in with Twitter</span>
-                <Twitter class="w-5 h-5"/>
+                <!--<Twitter class="w-5 h-5"/>-->
               </a>
             </div>
 
@@ -117,7 +117,7 @@
                   class="inline-flex justify-center py-2 px-4 w-full text-sm font-medium text-gray-500 bg-white hover:bg-gray-50 rounded-md border border-gray-300 shadow-sm"
               >
                 <span class="sr-only">Sign in with GitHub</span>
-                <GitHub class="w-5 h-5"/>
+                <!--<GitHub class="w-5 h-5"/>-->
               </a>
             </div>
 
@@ -127,7 +127,7 @@
                   class="inline-flex justify-center py-2 px-4 w-full text-sm font-medium text-gray-500 bg-white hover:bg-gray-50 rounded-md border border-gray-300 shadow-sm"
               >
                 <span class="sr-only">Sign in with Google</span>
-                <Google class="w-5 h-5"/>
+                <!--<Google class="w-5 h-5"/>-->
               </a>
             </div>
           </div>
@@ -138,13 +138,13 @@
 </template>
 
 <script setup>
-import AppHead from "@/Components/AppHead.vue";
-import Button from "@/Components/Forms/Buttons/ButtonForm.vue";
-import Input from "@/Components/Forms/Inputs/InputForm.vue";
-import Facebook from "@/Components/Icons/FacebookIcon.vue";
-import GitHub from "@/Components/Icons/GitHubIcon.vue";
-import Google from "@/Components/Icons/GoogleIcon.vue";
-import Twitter from "@/Components/Icons/TwitterIcon.vue";
+import AppHead from "../Components/AppHead.vue";
+import Button from "../Components/Forms/Buttons/ButtonForm.vue";
+import Input from "../Components/Forms/Inputs/InputForm.vue";
+// import Facebook from "@/Components/Icons/FacebookIcon.vue";
+// import GitHub from "@/Components/Icons/GitHubIcon.vue";
+// import Google from "@/Components/Icons/GoogleIcon.vue";
+// import Twitter from "@/Components/Icons/TwitterIcon.vue";
 import {useForm} from "@inertiajs/vue3";
 import route from "ziggy-js";
 

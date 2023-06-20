@@ -46,12 +46,12 @@
 </template>
 
 <script setup>
-import AppHead from "@/Components/AppHead.vue";
-import Button from "@/Components/Forms/Buttons/ButtonForm.vue";
-import Input from "@/Components/Forms/Inputs/InputForm.vue";
+import AppHead from "../Components/AppHead.vue";
+import Button from "../Components/Forms/Buttons/ButtonForm.vue";
+import Input from "../Components/Forms/Inputs/InputForm.vue";
 import {useForm} from "@inertiajs/vue3";
 import route from "ziggy-js";
-import Alert from "@/Components/Alert.vue";
+import Alert from "../Components/Alert.vue";
 
 let form = useForm({
   email: null,

@@ -1,7 +1,7 @@
 <script setup>
-import Button from "@/Components/Forms/Buttons/ButtonForm.vue";
-import Checkbox from "@/Components/Forms/Inputs/CheckboxForm.vue";
-import Input from "@/Components/Forms/Inputs/InputForm.vue";
+import Button from "../Components/Forms/Buttons/ButtonForm.vue";
+import Checkbox from "../Components/Forms/Inputs/CheckboxForm.vue";
+import Input from "../Components/Forms/Inputs/InputForm.vue";
 import {useForm} from "@inertiajs/vue3";
 import route from "ziggy-js";
 import Alert from "@/Components/Alert.vue";

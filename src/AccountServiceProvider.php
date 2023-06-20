@@ -17,7 +17,7 @@ class AccountServiceProvider extends PackageServiceProvider
         $package
             ->name('account')
             ->hasConfigFile()
-            ->hasViews()
+            ->hasViews('Account')
             ->hasMigration('create_users_table')
             ->hasMigration('create_password_reset_tokens_table')
             ->hasCommand(AccountCommand::class)
