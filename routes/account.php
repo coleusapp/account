@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::group(['prefix' => config('account.route_prefix', 'account')], function () {
+Route::group([
+    'prefix' => config('account.route_prefix', 'account'),
+    'middleware' => \Coleus\Account\Middleware\HandleInertiaRequests::class
+], function () {
     Route::get('login', fn () => 'login');
     Route::post('login', fn () => 'login');
     Route::get('register', fn () => 'login');
