@@ -1,24 +1,22 @@
-import '../css/app.css';
-
+// import '../css/app.css';
 import {createApp, h} from 'vue';
 import {createInertiaApp, Link} from '@inertiajs/vue3';
-import ThePlain from "./Layouts/ThePlain.vue";
+import ThePlain from "@account/Layouts/ThePlain.vue";
+import {resolvePageComponent} from "laravel-vite-plugin/inertia-helpers";
 
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Account';
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
-    resolve: name => {
-        const pages = import.meta.glob('./Pages/**/*.vue', {eager: true})
-        let page = pages[`./Pages/${name}.vue`]
+    resolve: async name => {
+        let page = await resolvePageComponent(`./Pages/${name}.vue`, import.meta.glob('./Pages/**/*.vue'))
         page.default.layout = ThePlain
         return page
     },
-    setup({el, App, props, plugin}) {
-        return createApp({render: () => h(App, props)})
+    setup({ el, App, props, plugin }) {
+        return createApp({ render: () => h(App, props) })
             .use(plugin)
-            .component("Link", Link)
-            .mount(el);
+            .mount(el)
     },
     progress: {
         color: '#4B5563',

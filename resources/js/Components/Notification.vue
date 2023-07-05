@@ -42,7 +42,7 @@
                   @click="show = false"
               >
                 <span class="sr-only">Close</span>
-                <XIcon aria-hidden="true" class="h-5 w-5"/>
+                <!--<XIcon aria-hidden="true" class="h-5 w-5"/>-->
               </button>
             </div>
           </div>
@@ -54,7 +54,7 @@
 
 <script setup>
 import {CheckCircleIcon, ExclamationCircleIcon} from "@heroicons/vue/24/outline";
-import {XIcon} from "@heroicons/vue/24/solid";
+// import {XIcon} from "@heroicons/vue/24/solid";
 import {TransitionRoot} from "@headlessui/vue";
 
 defineProps({

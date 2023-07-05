@@ -3,16 +3,22 @@ import laravel from "laravel-vite-plugin";
 import vue from "@vitejs/plugin-vue";
 import path from "path";
 
+const rootPath='../../..';
+
 export default defineConfig({
+    envDir: rootPath,
     resolve: {
         alias: {
-            '@': path.resolve(__dirname, './resources/js'),
+            '@account': path.resolve(__dirname, './resources/js'),
         },
     },
     plugins: [
         laravel({
             input: "resources/js/app.js",
             refresh: true,
+            buildDirectory: 'dist',
+            publicDirectory: 'resources',
+            hotFile: `${rootPath}/public/hot`
         }),
         vue({
             template: {

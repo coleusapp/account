@@ -22,12 +22,12 @@ class AuthController extends Controller
 
     public function loginForm(): Response
     {
-        return Inertia::render('Auth/TheLogin');
+        return Inertia::render('TheLogin');
     }
 
     public function registerForm(Request $request): Response
     {
-        return Inertia::render('Auth/TheRegister');
+        return Inertia::render('TheRegister');
     }
 
     public function registerWithEmail(RegisterWithEmailRequest $request): RedirectResponse
@@ -76,7 +76,7 @@ class AuthController extends Controller
 
     public function forgotPasswordForm(): Response
     {
-        return Inertia::render('Auth/ForgotPassword');
+        return Inertia::render('ForgotPassword');
     }
 
     public function forgotPasswordWithEmail(Request $request): RedirectResponse
@@ -94,7 +94,7 @@ class AuthController extends Controller
 
     public function resetPasswordForm(string $token): Response
     {
-        return Inertia::render('Auth/ResetPassword', ['token' => $token]);
+        return Inertia::render('ResetPassword', ['token' => $token]);
     }
 
     public function resetPassword(Request $request): RedirectResponse

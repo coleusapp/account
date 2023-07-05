@@ -19,7 +19,7 @@
               @click.prevent="show = false"
           >
             <span class="sr-only">Dismiss</span>
-            <XIcon aria-hidden="true" class="h-5 w-5"/>
+            <!--<XIcon aria-hidden="true" class="h-5 w-5"/>-->
           </button>
         </div>
       </div>
@@ -28,7 +28,7 @@
 </template>
 
 <script setup>
-import {CheckCircleIcon, XIcon} from '@heroicons/vue/24/solid';
+import {CheckCircleIcon} from '@heroicons/vue/24/solid';
 import {ref} from "vue";
 
 defineProps({
