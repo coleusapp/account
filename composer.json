@@ -1,0 +1,76 @@
+{
+    "name": "coleus/account",
+    "description": "Account manager for Coleus",
+    "keywords": [
+        "coleus",
+        "laravel",
+        "account"
+    ],
+    "homepage": "https://github.com/coleus/account",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Amirmasoud Sheydaei",
+            "email": "amirmasood33@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/contracts": "^10.0",
+        "inertiajs/inertia-laravel": "^0.6.9",
+        "spatie/laravel-data": "^3.6",
+        "spatie/laravel-package-tools": "^1.14",
+        "spatie/laravel-permission": "^5.10",
+        "tightenco/ziggy": "^1.6"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^7.9",
+        "nunomaduro/larastan": "^2.0.1",
+        "orchestra/testbench": "^8.0",
+        "pestphp/pest": "^2.0",
+        "pestphp/pest-plugin-arch": "^2.0",
+        "pestphp/pest-plugin-laravel": "^2.0",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Coleus\\Account\\": "src/",
+            "Coleus\\Account\\Database\\Factories\\": "database/factories/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Coleus\\Account\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Coleus\\Account\\AccountServiceProvider"
+            ],
+            "aliases": {
+                "Account": "Coleus\\Account\\Facades\\Account"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
