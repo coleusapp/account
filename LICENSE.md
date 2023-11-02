@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) coleus <amirmasood33@gmail.com>
+Copyright (c) coleus <amirmasoud@coleus.app>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

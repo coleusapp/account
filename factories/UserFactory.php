@@ -1,6 +1,6 @@
 <?php
 
-namespace Coleus\Account\Database\Factories;
+namespace Coleus\Account\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
