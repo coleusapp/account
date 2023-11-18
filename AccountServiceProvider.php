@@ -2,12 +2,24 @@
 
 namespace Coleus\Account;
 
+use Coleus\Account\Commands\AccountCommand;
 use Illuminate\Support\ServiceProvider;
 
 class AccountServiceProvider extends ServiceProvider
 {
     public function register()
     {
+        $this->loadRoutesFrom(__DIR__.'/routes/web.php');
+        $this->loadViewsFrom(__DIR__.'/resources/views', 'account');
+        $this->mergeConfigFrom(__DIR__.'/config/account.php', 'account');
+        $this->loadMigrationsFrom(__DIR__.'/database/migrations');
+        $this->commands([
+            AccountCommand::class,
+        ]);
+        $this->publishes([
+            __DIR__.'/resources/dist' => public_path('dist/coleus/account')
+        ], 'dist');
+
         $this->app->bind('account', function ($app) {
             return new Account();
         });
@@ -22,14 +34,6 @@ class AccountServiceProvider extends ServiceProvider
     //     $this->app->register(PermissionServiceProvider::class);
     //
     //     $package
-    //         ->setBasePath($package->basePath)
-    //         ->name('account')
-    //         ->hasConfigFile('Account/account')
-    //         ->hasViews()
-    //         ->hasMigration('create_users_table')
-    //         ->hasMigration('create_password_reset_tokens_table')
-    //         ->hasCommand(AccountCommand::class)
-    //         ->hasRoute('account')
     //         ->hasAssets()
     //         ->hasInstallCommand(function (InstallCommand $command) {
     //             $command

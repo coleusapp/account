@@ -3,7 +3,7 @@ import laravel from "laravel-vite-plugin";
 import vue from "@vitejs/plugin-vue";
 import path from "path";
 
-const rootPath = '../../..';
+const rootPath = '../../../../coleus-dev';
 
 export default defineConfig({
     envDir: rootPath,
@@ -13,7 +13,8 @@ export default defineConfig({
         },
     },
     build: {
-        modulePreload: false
+        modulePreload: false,
+        assetsDir: '.'
     },
     plugins: [
         laravel({
