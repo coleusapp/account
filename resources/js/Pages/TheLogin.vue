@@ -61,7 +61,7 @@ let form = useForm({
                     :href="route('getForgetPasswordForm')"
                     class="font-medium text-indigo-600 hover:text-indigo-500"
                 >
-                  Forgot your password?
+                  Forgot Password
                 </Link>
               </div>
             </div>
@@ -78,6 +78,15 @@ let form = useForm({
             </div>
           </form>
         </div>
+      </div>
+
+      <div class="text-sm text-center mt-12">
+        <Link
+            :href="route('getRegisterForm')"
+            class="font-medium text-indigo-600 hover:text-indigo-500"
+        >
+          Don't have an account? Register
+        </Link>
       </div>
     </div>
   </section>
