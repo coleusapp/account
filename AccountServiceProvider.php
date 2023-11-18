@@ -2,32 +2,40 @@
 
 namespace Coleus\Account;
 
-use Coleus\Account\Commands\AccountCommand;
-use Spatie\LaravelPackageTools\Commands\InstallCommand;
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Spatie\Permission\PermissionServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
-class AccountServiceProvider extends PackageServiceProvider
+class AccountServiceProvider extends ServiceProvider
 {
-    public function configurePackage(Package $package): void
+    public function register()
     {
-        $this->app->register(PermissionServiceProvider::class);
-
-        $package
-            ->name('account')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_users_table')
-            ->hasMigration('create_password_reset_tokens_table')
-            ->hasCommand(AccountCommand::class)
-            ->hasRoute('account')
-            ->hasAssets()
-            ->hasInstallCommand(function (InstallCommand $command) {
-                $command
-                    ->publishConfigFile()
-                    ->publishAssets()
-                    ->publishMigrations();
-            });
+        $this->app->bind('account', function ($app) {
+            return new Account();
+        });
     }
+
+    public function boot()
+    {
+        //
+    }
+    // public function configurePackage(Package $package): void
+    // {
+    //     $this->app->register(PermissionServiceProvider::class);
+    //
+    //     $package
+    //         ->setBasePath($package->basePath)
+    //         ->name('account')
+    //         ->hasConfigFile('Account/account')
+    //         ->hasViews()
+    //         ->hasMigration('create_users_table')
+    //         ->hasMigration('create_password_reset_tokens_table')
+    //         ->hasCommand(AccountCommand::class)
+    //         ->hasRoute('account')
+    //         ->hasAssets()
+    //         ->hasInstallCommand(function (InstallCommand $command) {
+    //             $command
+    //                 ->publishConfigFile()
+    //                 ->publishAssets()
+    //                 ->publishMigrations();
+    //         });
+    // }
 }
