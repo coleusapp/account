@@ -10,6 +10,7 @@ export default defineConfig({
     resolve: {
         alias: {
             '@account': path.resolve(__dirname, './resources/js'),
+            '@ui': path.resolve(__dirname, './vendor/coleus/ui/resources/js'),
         },
     },
     build: {

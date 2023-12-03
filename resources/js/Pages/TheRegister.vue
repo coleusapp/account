@@ -1,8 +1,10 @@
 <script setup>
 import AppHead from "@account/Components/AppHead.vue";
-import Button from "@account/Components/Forms/Buttons/ButtonForm.vue";
-import Input from "@account/Components/Forms/Inputs/InputForm.vue";
-import {Link, useForm} from "@inertiajs/vue3";
+import Button from "@ui/Components/Forms/Buttons/ButtonForm.vue";
+import Input from "@ui/Components/Forms/Inputs/InputForm.vue";
+import InertiaLink from "@ui/Components/InertiaLink.vue";
+import {useForm} from "@inertiajs/vue3";
+import TheH2 from "@ui/Components/Typography/TheH2.vue";
 import route from "ziggy-js";
 
 defineProps({
@@ -23,9 +25,7 @@ let form = useForm({
       class="flex flex-col justify-center py-12 sm:px-6 lg:px-8 min-h-screen bg-gray-50"
   >
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
-      <h2 class="mt-6 text-3xl font-extrabold text-center text-gray-900">
-        Register
-      </h2>
+      <TheH2 class="text-center">Register</TheH2>
     </div>
 
     <div class="sm:mx-auto mt-8 sm:w-full sm:max-w-md">
@@ -71,12 +71,9 @@ let form = useForm({
 
           <div class="flex justify-center items-center">
             <div class="text-sm">
-              <Link
-                  :href="route('getLoginForm')"
-                  class="font-medium text-indigo-600 hover:text-indigo-500"
-              >
+              <InertiaLink :href="route('getLoginForm')">
                 Already have an account?
-              </Link>
+              </InertiaLink>
             </div>
           </div>
 
