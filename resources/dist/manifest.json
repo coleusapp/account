@@ -1,52 +1,52 @@
 {
-  "_InputForm-4dfd39a1.js": {
-    "file": "InputForm-4dfd39a1.js",
+  "_InputForm-b4aca5de.js": {
+    "file": "InputForm-b4aca5de.js",
     "imports": [
-      "_index.m-3221c546.js",
+      "_index.m-888d95fc.js",
       "resources/js/app.js"
     ]
   },
-  "_index.m-3221c546.js": {
-    "file": "index.m-3221c546.js",
+  "_index.m-888d95fc.js": {
+    "file": "index.m-888d95fc.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
   "resources/js/Pages/ForgotPassword.vue": {
-    "file": "ForgotPassword-7162f289.js",
+    "file": "ForgotPassword-11f996f1.js",
     "imports": [
       "resources/js/app.js",
-      "_index.m-3221c546.js",
-      "_InputForm-4dfd39a1.js"
+      "_index.m-888d95fc.js",
+      "_InputForm-b4aca5de.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/ForgotPassword.vue"
   },
   "resources/js/Pages/ResetPassword.vue": {
-    "file": "ResetPassword-f58642c3.js",
+    "file": "ResetPassword-6e1e53a4.js",
     "imports": [
       "resources/js/app.js",
-      "_index.m-3221c546.js",
-      "_InputForm-4dfd39a1.js"
+      "_index.m-888d95fc.js",
+      "_InputForm-b4aca5de.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/ResetPassword.vue"
   },
   "resources/js/Pages/TheLogin.vue": {
-    "file": "TheLogin-857d89e7.js",
+    "file": "TheLogin-fefc441c.js",
     "imports": [
       "resources/js/app.js",
-      "_InputForm-4dfd39a1.js",
-      "_index.m-3221c546.js"
+      "_InputForm-b4aca5de.js",
+      "_index.m-888d95fc.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/TheLogin.vue"
   },
   "resources/js/Pages/TheRegister.vue": {
-    "file": "TheRegister-ea986ab7.js",
+    "file": "TheRegister-87e40c63.js",
     "imports": [
       "resources/js/app.js",
-      "_index.m-3221c546.js"
+      "_index.m-888d95fc.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/TheRegister.vue"
@@ -65,7 +65,7 @@
       "resources/js/Pages/TheLogin.vue",
       "resources/js/Pages/TheRegister.vue"
     ],
-    "file": "app-53d9385d.js",
+    "file": "app-e6975488.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }
