@@ -6,6 +6,7 @@ import {Link, useForm} from "@inertiajs/vue3";
 import route from "ziggy-js";
 import Alert from "@account/Components/Alert.vue";
 import AppHead from "@account/Components/AppHead.vue";
+import TheEmpty from "@ui/Components/TheEmpty.vue";
 
 let form = useForm({
   email: null,
@@ -16,6 +17,7 @@ let form = useForm({
 <template>
   <section>
     <AppHead title="Login"/>
+    <TheEmpty />
     <div
         class="flex flex-col justify-center py-12 sm:px-6 lg:px-8 min-h-screen bg-gray-50"
     >
